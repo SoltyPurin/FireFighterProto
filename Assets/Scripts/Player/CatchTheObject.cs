@@ -22,5 +22,7 @@ public class CatchTheObject : MonoBehaviour
     public void CatchProtocol()
     {
         _closestObject.transform.SetParent(this.transform);
+        Rigidbody _closetObjectRigidBody = _closestObject.GetComponent<Rigidbody>();
+        _closetObjectRigidBody.isKinematic = true;
     }
 }

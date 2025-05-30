@@ -12,7 +12,7 @@ public class InputPlayerObjectGet : MonoBehaviour
     private bool _isHaveingObject = false; //オブジェクトを持ってるかどうか
     private void Update()
     {
-        bool canCatch = Input.GetButtonDown(CATCHBUTTONNAME) && _isHaveingObject;
+        bool canCatch = Input.GetButtonDown(CATCHBUTTONNAME) && !_isHaveingObject;
         if (canCatch)
         {
             _catchTheObject.CatchProtocol();
