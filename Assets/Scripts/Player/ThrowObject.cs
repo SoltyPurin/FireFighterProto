@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ThrowObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("他スクリプト取得用")]
+    [SerializeField] private CatchTheObject _catchTheObject = default;
 
-    // Update is called once per frame
-    void Update()
+    public void ObjectThrow(GameObject closetObject)
     {
-        
+        if (closetObject == null)
+        {
+            return;
+        }
+        closetObject.transform.SetParent(null);
+        Rigidbody closetObjectRigidBody = closetObject.GetComponent<Rigidbody>();
+        closetObjectRigidBody.isKinematic = false;
+        closetObjectRigidBody.AddForce(Vector3.forward, ForceMode.VelocityChange);
     }
 }
