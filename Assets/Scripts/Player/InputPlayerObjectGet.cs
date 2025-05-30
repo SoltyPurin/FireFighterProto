@@ -9,7 +9,8 @@ public class InputPlayerObjectGet : MonoBehaviour
 
     private readonly string CATCHBUTTONNAME = "Catch"; //取るボタンの変数名
 
-    private bool _isHaveingObject = false; //オブジェクトを持ってるかどうか
+    //オブジェクトを持ってるかどうか、持ってたら投げるスクリプトに命令する
+    private bool _isHaveingObject = false; 
     private void Update()
     {
         bool canCatch = Input.GetButtonDown(CATCHBUTTONNAME) && !_isHaveingObject;
