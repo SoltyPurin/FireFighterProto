@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputPlayerObjectThrow : MonoBehaviour
+public class InputThrowObject : MonoBehaviour
 {
     [Header("他スクリプト取得用")]
-    [SerializeField] private ThrowObject _throwObject = default;
-    [SerializeField] private InputPlayerObjectGet _inputObjectGet = default;
-    [SerializeField] private CatchTheObject _catchTheObject = default;
+    [SerializeField] private ThrowProtocol _throwObject = default;
+    [SerializeField] private InputGetObject _inputObjectGet = default;
+    [SerializeField] private CatchProtocol _catchTheObject = default;
 
     private readonly string THROWBUTTONNAME = "Catch";
 
@@ -20,7 +20,7 @@ public class InputPlayerObjectThrow : MonoBehaviour
         if (_canThrow)
         {
             Debug.Log("投げた");
-            _throwObject.ObjectThrow(_catchTheObject.HavingObject);
+            _throwObject.ThrowMethod(_catchTheObject.HavingObject);
         }
     }
 }

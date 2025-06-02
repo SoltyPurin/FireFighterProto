@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowObject : MonoBehaviour
+public class ThrowProtocol : MonoBehaviour
 {
     [Header("他スクリプト取得用")]
-    [SerializeField] private CatchTheObject _catchTheObject = default;
-    [SerializeField] private InputPlayerObjectGet _inputPlayerObjectGet = default;
+    [SerializeField] private CatchProtocol _catchTheObject = default;
+    [SerializeField] private InputGetObject _inputPlayerObjectGet = default;
 
-    public void ObjectThrow(GameObject closetObject)
+    public void ThrowMethod(GameObject closetObject)
     {
         if (closetObject == null)
         {

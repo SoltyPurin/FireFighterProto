@@ -7,10 +7,10 @@ public enum PlayerState
     None,
     Having
 }
-public class InputPlayerObjectGet : MonoBehaviour
+public class InputGetObject : MonoBehaviour
 {
     [Header("他スクリプト取得用")]
-    [SerializeField] private CatchTheObject _catchTheObject = default;
+    [SerializeField] private CatchProtocol _catchTheObject = default;
 
     private readonly string CATCHBUTTONNAME = "Catch"; //取るボタンの変数名
 
@@ -31,7 +31,7 @@ public class InputPlayerObjectGet : MonoBehaviour
         if (_canCatch)
         {
             Debug.Log("キャッチ");
-            _catchTheObject.CatchProtocol();
+            _catchTheObject.CatchMethod();
         }
     }
 }
