@@ -5,7 +5,6 @@ using UnityEngine;
 public class GroundDetected : MonoBehaviour
 {
     [Header("他スクリプト取得")]
-    [SerializeField] private BoxCollider _groundCollider = default;
     [SerializeField] private InputJump _inputJump = default;
 
     private void OnTriggerEnter(Collider other)

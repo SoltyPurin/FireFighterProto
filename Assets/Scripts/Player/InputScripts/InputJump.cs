@@ -16,6 +16,7 @@ public class InputJump : MonoBehaviour
         bool canJump = Input.GetButtonDown(JUMPBUTTONNAME) && _isDetectedGround;
         if (canJump)
         {
+            Debug.Log("ƒWƒƒƒ“ƒv");
             _jumpProtocol.JumpMethod();
         }
     }
