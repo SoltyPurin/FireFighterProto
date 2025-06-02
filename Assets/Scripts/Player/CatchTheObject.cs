@@ -8,7 +8,6 @@ public class CatchTheObject : MonoBehaviour
     [SerializeField] private BoxCollider _boxCollider = default;
     [SerializeField] private InputPlayerObjectGet _inputObjectGet = default;
 
-    private bool _canCatch = false;
 
     [SerializeField] private GameObject _closetObject = default; //近くにあるオブジェクト
 
@@ -44,8 +43,10 @@ public class CatchTheObject : MonoBehaviour
         Vector3 initClosetObjectPosition = _havingObject.transform.position;
         initClosetObjectPosition.y += 0.5f;
         _havingObject.transform.position = initClosetObjectPosition;
-        Rigidbody _closetObjectRigidBody = _havingObject.GetComponent<Rigidbody>();
-        _closetObjectRigidBody.isKinematic = true;
+        Rigidbody havingObjectRigidBody = _havingObject.GetComponent<Rigidbody>();
+        BoxCollider havingObjectBoxCollider = _havingObject.GetComponent<BoxCollider>();
+        havingObjectBoxCollider.enabled = false;
+        havingObjectRigidBody.isKinematic = true;
     }
 
     private void ChangeState()
