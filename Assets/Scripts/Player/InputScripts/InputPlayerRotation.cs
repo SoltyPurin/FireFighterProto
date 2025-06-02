@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InputPlayerRotation : MonoBehaviour
 {
-
+    private float _slerpCorrectionValue = 5.0f; //Slerpの補完値
 
     private Vector3 _playerRotation = default; //回転方向の入れ物
 
@@ -18,12 +18,15 @@ public class InputPlayerRotation : MonoBehaviour
         _horizontal = Input.GetAxis(HORIZONTALNAME);
         //垂直の入力値を代入
         _vertical = Input.GetAxis(VERTICALNAME) ;
-        _playerRotation = new Vector3(_horizontal, 0, _vertical).normalized;
     }
 
     private void FixedUpdate()
     {
+        //回転を代入
+        _playerRotation = new Vector3(_horizontal, 0, _vertical).normalized;
+        //プレイヤーの回転をLookAt地点に設定、それをQuaternionに反映
         Quaternion targetRotation = Quaternion.LookRotation(_playerRotation);
-        transform.rotation = Quaternion.Slerp(this.transform.rotation,targetRotation,5);
+        //Slerpでなめらかに回転させる。なお、入力が無い時は自動的に元の角度に戻る
+        transform.rotation = Quaternion.Slerp(this.transform.rotation,targetRotation, _slerpCorrectionValue);
     }
 }

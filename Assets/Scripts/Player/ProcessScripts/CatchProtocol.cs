@@ -12,13 +12,13 @@ public class CatchProtocol : MonoBehaviour
 
     public GameObject ClosetObject
     {
-        set { _closetObject = value; }
+        set { _closetObject = value; } //SendObjectProtocolによりsetし、情報を受け取る
     }
     [SerializeField] private GameObject _havingObject = default;//取得したオブジェクト
 
     public GameObject HavingObject
     {
-        get { return _havingObject; }
+        get { return _havingObject; } //持っているオブジェクトを他スクリプトから参照できるようにする
     }
 
 
@@ -26,24 +26,26 @@ public class CatchProtocol : MonoBehaviour
     {
         if(_closetObject == null)
         {
-            return;
+            return; //近くに物がない場合はreturn
         }
-        _havingObject = _closetObject;
-        _closetObject = null;
-        Invoke("ChangeState", 0.5f);
-        _havingObject.transform.SetParent(this.transform);
-        Vector3 initClosetObjectPosition = _havingObject.transform.position;
-        initClosetObjectPosition.y += 0.5f;
-        _havingObject.transform.position = initClosetObjectPosition;
-        Rigidbody havingObjectRigidBody = _havingObject.GetComponent<Rigidbody>();
-        BoxCollider havingObjectBoxCollider = _havingObject.GetComponent<BoxCollider>();
-        havingObjectBoxCollider.enabled = false;
-        havingObjectRigidBody.isKinematic = true;
+        _havingObject = _closetObject; //近くにある(closet)オブジェクトから持ってる(Having)オブジェクトにする
+        _closetObject = null; //近くにあるオブジェクトはnullにする
+        StartCoroutine(ChangeState()); //ここでステート変更の処理を走らせる
+        _havingObject.transform.SetParent(this.transform); //プレイヤーの子オブジェクトにする
+        Vector3 initClosetObjectPosition = _havingObject.transform.position; //そのオブジェクトの座標を取得
+        initClosetObjectPosition.y += 0.5f; //少し持ち上げる、これをしないと気持ちよく投げられない
+        _havingObject.transform.position = initClosetObjectPosition; //持ち上げた後の座標を反映
+        Rigidbody havingObjectRigidBody = _havingObject.GetComponent<Rigidbody>(); //オブジェクトのrigidbodyを取得
+        BoxCollider havingObjectBoxCollider = _havingObject.GetComponent<BoxCollider>(); //boxColliderも取得
+        havingObjectBoxCollider.enabled = false; //boxColliderを無効化し、ひっかからなくする
+        havingObjectRigidBody.isKinematic = true;//isKinematicをtrueにし、物理挙動を無効化する
     }
 
-    private void ChangeState()
+    private IEnumerator ChangeState()
     {
-        _inputObjectGet.PlayerState = PlayerState.Having;
+        //ここで遅延させないと投げる処理とかぶってバグる
+        yield return new WaitForSeconds(0.5f);
+        _inputObjectGet.PlayerState = PlayerState.Having; //プレイヤーのステートをHavingにする
 
     }
 }

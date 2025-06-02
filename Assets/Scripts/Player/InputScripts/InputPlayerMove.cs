@@ -16,9 +16,9 @@ public class InputPlayerMove : MonoBehaviour
     private float _vertical = default;                       //垂直の入力値の入れ物
     private void Update()
     {
-        //水平の入力値を代入
+        //水平の入力値を代入。そして早すぎるので減速
         _horizontal = Input.GetAxis(HORIZONTALNAME) * _moveSpeedMultiplier;
-        //垂直の入力値を代入
+        //垂直の入力値を代入。そして早すぎるので減速
         _vertical = Input.GetAxis(VERTICALNAME) * _moveSpeedMultiplier;             
     }
 

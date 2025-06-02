@@ -9,11 +9,13 @@ public class GroundDetected : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //’n–Ê‚É‚Â‚¢‚Ä‚½‚çIsDetectedGround‚ðtrue‚É‚·‚é
         _inputJump.IsDetectedGround = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        //’n–Ê‚©‚ç—£‚ê‚½‚çIsDetectedGround‚ðfalse‚É‚·‚é
         _inputJump.IsDetectedGround = false;
     }
 }
