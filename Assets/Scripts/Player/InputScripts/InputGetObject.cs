@@ -14,10 +14,10 @@ public class InputGetObject : MonoBehaviour
 
     private readonly string CATCHBUTTONNAME = "Catch"; //取るボタンの変数名
 
-    private PlayerState _playerState = PlayerState.None;
+    private PlayerState _playerState = PlayerState.None; //最初はなにも持ってないのでNoneを適用
     public PlayerState PlayerState
     {
-        set { _playerState = value; } //CatchTheObjectスクリプトから書き換え
+        set { _playerState = value; } //CatchProtocolとThrowProtocolスクリプトから書き換え
         get { return _playerState; } //InputPlayerObjectThrowから参照
     }
 
@@ -30,7 +30,7 @@ public class InputGetObject : MonoBehaviour
 
         if (_canCatch)
         {
-            Debug.Log("キャッチ");
+            //キャッチの処理の実行命令を出す
             _catchTheObject.CatchMethod();
         }
     }

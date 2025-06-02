@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7529082070302156752}
   - component: {fileID: -2064569847026566677}
   - component: {fileID: 5929071593058313675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BreakCube
   m_TagString: Stage
   m_Icon: {fileID: 0}
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa6f95a6d750143a345d6abfd83a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidBody: {fileID: 5929071593058313675}
 --- !u!54 &5929071593058313675
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,7 +128,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946782075730485097}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
