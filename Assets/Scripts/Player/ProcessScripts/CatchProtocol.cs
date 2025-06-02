@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatchTheObject : MonoBehaviour
+public class CatchProtocol : MonoBehaviour
 {
     [Header("取得用")]
-    [SerializeField] private BoxCollider _boxCollider = default;
-    [SerializeField] private InputPlayerObjectGet _inputObjectGet = default;
+    [SerializeField] private InputGetObject _inputObjectGet = default;
 
-
+    [Header("近くにあるオブジェクトの情報が入るのでインスペクターでは入れない")]
     [SerializeField] private GameObject _closetObject = default; //近くにあるオブジェクト
 
     public GameObject ClosetObject
     {
-        get { return _closetObject; }
+        set { _closetObject = value; }
     }
     [SerializeField] private GameObject _havingObject = default;//取得したオブジェクト
 
@@ -22,15 +21,8 @@ public class CatchTheObject : MonoBehaviour
         get { return _havingObject; }
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (!collision.gameObject.CompareTag("Stage"))
-        {
-            _closetObject = collision.gameObject;
-        }
-    }
 
-    public void CatchProtocol()
+    public void CatchMethod()
     {
         if(_closetObject == null)
         {
