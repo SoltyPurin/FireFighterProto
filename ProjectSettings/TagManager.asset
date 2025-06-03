@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Stage
   - Deblis
+  - HitStop
+  - Rescue
   layers:
   - Default
   - TransparentFX

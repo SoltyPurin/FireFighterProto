@@ -21,6 +21,7 @@ public class CatchProtocol : MonoBehaviour
         get { return _havingObject; } //持っているオブジェクトを他スクリプトから参照できるようにする
     }
 
+    private readonly string RESCUEPERSONTAG = "Rescue";
 
     public void CatchMethod()
     {
