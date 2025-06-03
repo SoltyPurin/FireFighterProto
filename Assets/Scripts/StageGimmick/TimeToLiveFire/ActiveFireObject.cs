@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ActiveFireObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Vector3 _mediumFireSize = new Vector3(1, 0.5f,1);
+    [SerializeField] private Vector3 _lergeFireSize = new Vector3(1, 10, 1);
+
+    public void MediumFireUp()
     {
-        
+        transform.localScale = _mediumFireSize;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LergeFireUp()
     {
-        
+        transform.localScale = _lergeFireSize;
     }
 }
