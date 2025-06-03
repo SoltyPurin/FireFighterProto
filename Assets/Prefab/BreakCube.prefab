@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 5929071593058313675}
-  _forceOfDirection: 6
+  _forceOfDirection: 8
 --- !u!54 &5929071593058313675
 Rigidbody:
   m_ObjectHideFlags: 0
