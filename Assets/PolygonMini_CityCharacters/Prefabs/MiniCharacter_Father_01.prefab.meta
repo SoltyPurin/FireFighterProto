@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c75b833e269eebc47a5fda5832a5c25e
+timeCreated: 1548808052
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_Father_01.prefab
+  uploadId: 291371

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e6f1e13343ea0f146a6a6b594ccf664b
+timeCreated: 1548808051
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_Gangster_01.prefab
+  uploadId: 291371

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 60ac356c0a6f2694785d679c71585c01
+timeCreated: 1548808044
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_Female_Coat.prefab
+  uploadId: 291371

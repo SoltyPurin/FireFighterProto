@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d5532418ec14b52438f143677f9ebbe4
+timeCreated: 1548801390
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Green_A.mat
+  uploadId: 291371

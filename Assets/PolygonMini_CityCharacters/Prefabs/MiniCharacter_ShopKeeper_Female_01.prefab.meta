@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cb04aaf2565cd514ea0cd707372e6080
+timeCreated: 1548811108
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_ShopKeeper_Female_01.prefab
+  uploadId: 291371

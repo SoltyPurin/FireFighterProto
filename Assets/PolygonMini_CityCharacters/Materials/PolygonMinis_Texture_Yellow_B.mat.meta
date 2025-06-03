@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6be246d592edcad4eaaf5bf4776e698c
+timeCreated: 1548801390
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Yellow_B.mat
+  uploadId: 291371

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 086eb706c3edcf447aa2a9e0e0155538
+timeCreated: 1548808044
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_BusinessMan_Suit_01.prefab
+  uploadId: 291371

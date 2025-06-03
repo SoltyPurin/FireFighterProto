@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 83ee10f4aa3678f468ff8a8b30a275d8
+timeCreated: 1548808057
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_PunkGuy_01.prefab
+  uploadId: 291371

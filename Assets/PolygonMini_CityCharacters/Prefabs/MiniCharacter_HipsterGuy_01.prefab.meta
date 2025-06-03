@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ecce7fd9ad28e59488f2490e9c1aa92a
+timeCreated: 1548808045
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138401
+  packageName: POLYGON MINI - City Character Pack
+  packageVersion: 1.01
+  assetPath: Assets/PolygonMini_CityCharacters/Prefabs/MiniCharacter_HipsterGuy_01.prefab
+  uploadId: 291371
